@@ -33,7 +33,7 @@ const AddExistingToken: React.FC = () => {
     CHAIN_METADATA[network].explorer + 'token/';
 
   // get plugin Client
-  const pluginClient = usePluginClient('token-voting.plugin.dao.eth');
+  const pluginClient = usePluginClient('token-voting.plugin.echo77.eth');
 
   // Trigger address validation on network change
   useEffect(() => {

@@ -3,7 +3,7 @@
 import {i18n} from '../../../i18n.config';
 
 export const SUPPORTED_CHAIN_ID = [
-  1, 5, 137, 300, 324, 8453, 80001, 84531, 42161, 421613, 11155111,
+  1, 5, 46, 137, 300, 324, 8453, 80001, 84531, 42161, 421613, 11155111,
 ] as const;
 
 export type SupportedChainID = (typeof SUPPORTED_CHAIN_ID)[number];
@@ -25,6 +25,7 @@ export const NETWORKS_WITH_CUSTOM_REGISTRY: SupportedNetworks[] = [
   'sepolia',
   'zksync',
   'zksyncSepolia',
+  'darwinia',
 ];
 
 export const L2_NETWORKS = NETWORKS_WITH_CUSTOM_REGISTRY;
@@ -37,6 +38,7 @@ const SUPPORTED_NETWORKS = [
   'sepolia',
   'zksync',
   'zksyncSepolia',
+  'darwinia'
 ] as const;
 
 export type SupportedNetworks =
@@ -278,6 +280,31 @@ export const CHAIN_METADATA: Record<SupportedNetworks, ChainData> = {
     covalent: {
       networkId: 'zksync-sepolia-testnet',
       nativeTokenId: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee800A',
+    },
+    supportsEns: false,
+  },
+
+  darwinia: {
+    id: 46,
+    name: i18n.t('explore.modal.filterDAOs.label.darwinia'),
+    domain: 'L2 Blockchain',
+    logo: 'https://assets.coingecko.com/coins/images/9443/standard/RING.png?1696509535',
+    explorer: 'http://darwinia.subscan.io',
+    isTestnet: false,
+    mainnet: 'darwinia',
+    explorerName: 'Darwinia Subscan',
+    publicRpc: 'https://rpc.darwinia.network',
+    gatewayNetwork: 'darwinia/mainnet',
+    nativeCurrency: {
+      name: 'Darwinia Network Native Token',
+      symbol: 'RING',
+      decimals: 18,
+    },
+    etherscanApi: 'https://darwinia.api.subscan.io/api/scan/evm/contract/verifysource',
+    etherscanApiKey: '',
+    covalent: {
+      networkId: 'darwinia-mainnet',
+      nativeTokenId: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     },
     supportsEns: false,
   },

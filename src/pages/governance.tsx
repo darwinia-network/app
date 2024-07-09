@@ -49,7 +49,7 @@ export const Governance: React.FC = () => {
   const noProposals =
     isFetched && data?.pages[0].length === 0 && filter === 'All';
 
-  const isTokenBasedDao = pluginType === 'token-voting.plugin.dao.eth';
+  const isTokenBasedDao = pluginType === 'token-voting.plugin.echo77.eth';
   const enableDelegation =
     isTokenBasedDao &&
     featureFlags.getValue('VITE_FEATURE_FLAG_DELEGATION') === 'true';

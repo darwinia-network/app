@@ -44,7 +44,7 @@ export const EditMsSettings: React.FC<EditMsSettingsProps> = ({daoDetails}) => {
   const {errors, isValid, isDirty} = useFormState({control});
 
   const pluginAddress = daoDetails?.plugins?.[0]?.instanceAddress as string;
-  const pluginType: PluginTypes = 'multisig.plugin.dao.eth';
+  const pluginType: PluginTypes = 'multisig.plugin.echo77.eth';
   const {data: pluginVotingSettings, isLoading: settingsAreLoading} =
     useVotingSettings({
       pluginAddress,
@@ -193,7 +193,7 @@ export const EditMsSettings: React.FC<EditMsSettingsProps> = ({daoDetails}) => {
       setValue('multisigWallets', multisigWallets);
       setValue(
         'membership',
-        daoDetails?.plugins[0].id === 'token-voting.plugin.dao.eth'
+        daoDetails?.plugins[0].id === 'token-voting.plugin.echo77.eth'
           ? 'token'
           : 'multisig'
       );

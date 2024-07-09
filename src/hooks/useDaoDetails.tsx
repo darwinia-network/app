@@ -89,8 +89,8 @@ async function fetchDaoDetails(
 
   daoDetails?.plugins.sort((a: InstalledPluginListItem) => {
     if (
-      a.id === 'token-voting.plugin.dao.eth' ||
-      a.id === 'multisig.plugin.dao.eth'
+      a.id === 'token-voting.plugin.echo77.eth' ||
+      a.id === 'multisig.plugin.echo77.eth'
     )
       return -1;
     return 0;

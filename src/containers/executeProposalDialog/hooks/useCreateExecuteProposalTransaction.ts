@@ -34,7 +34,7 @@ export const useCreateExecuteTransactionProposal = (
         proposalId: proposalId as string,
       },
       {
-        enabled: enableHook && pluginType === 'multisig.plugin.dao.eth',
+        enabled: enableHook && pluginType === 'multisig.plugin.echo77.eth',
       }
     );
 
@@ -47,7 +47,7 @@ export const useCreateExecuteTransactionProposal = (
       proposalId: proposalId as string,
     },
     {
-      enabled: enableHook && pluginType === 'token-voting.plugin.dao.eth',
+      enabled: enableHook && pluginType === 'token-voting.plugin.echo77.eth',
     }
   );
 

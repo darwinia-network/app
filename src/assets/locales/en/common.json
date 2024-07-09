@@ -1069,7 +1069,8 @@
           "arbitrum": "Arbitrum",
           "ethereumSepolia": "Ethereum Sepolia",
           "zksync": "zkSync Era",
-          "zksyncSepolia": "zkSync Sepolia"
+          "zksyncSepolia": "zkSync Sepolia",
+          "darwinia": "Darwinia"
         },
         "ctaLabel": {
           "see0": "See 0 DAOs",

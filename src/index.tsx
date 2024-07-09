@@ -20,6 +20,7 @@ import {
   sepolia,
   zkSyncSepoliaTestnet,
   zkSync,
+  darwinia,
 } from 'wagmi/chains';
 import {AlertProvider} from 'context/alert';
 import {GlobalModalsProvider} from 'context/globalModals';
@@ -49,6 +50,7 @@ const chains = [
   sepolia,
   zkSyncSepoliaTestnet,
   zkSync,
+  darwinia,
 ] as [Chain, ...Chain[]];
 
 const transports = chains.reduce(

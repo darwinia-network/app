@@ -324,7 +324,7 @@ export function isDaoEnsNameValid(
   // for better performance
   try {
     contract
-      .recordExists(namehash(`${value}.dao.eth`))
+      .recordExists(namehash(`${value}.echo77.eth`))
       .then((result: boolean) => {
         const inputValue = getValues('daoEnsName');
         // Check to see if the response belongs to current value

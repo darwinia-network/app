@@ -51,7 +51,7 @@ const DaoMetadata: React.FC = () => {
           {!isL2Network && (
             <Dl>
               <Dt>{t('labels.daoEnsName')}</Dt>
-              <Dd>{`${daoEnsName}.dao.eth`}</Dd>
+              <Dd>{`${daoEnsName}.echo77.eth`}</Dd>
             </Dl>
           )}
           <Dl>

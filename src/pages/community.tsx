@@ -75,7 +75,7 @@ export const Community: React.FC = () => {
     subpageStart + MEMBERS_PER_PAGE
   );
 
-  const walletBased = pluginType === 'multisig.plugin.dao.eth';
+  const walletBased = pluginType === 'multisig.plugin.echo77.eth';
 
   const enableSearchSort = totalMemberCount > 0 && totalMemberCount <= 1000;
   const enableDelegation =

@@ -21,7 +21,7 @@ export const useDelegateTokens = (
     IDelegateTokensParams
   >
 ) => {
-  const client = usePluginClient('token-voting.plugin.dao.eth');
+  const client = usePluginClient('token-voting.plugin.echo77.eth');
 
   return useMutation({
     mutationFn: (params: IDelegateTokensParams) =>

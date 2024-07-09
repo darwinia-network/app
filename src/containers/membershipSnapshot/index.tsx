@@ -51,7 +51,7 @@ export const MembershipSnapshot: React.FC<Props> = ({
     daoDetails,
   });
 
-  const walletBased = pluginType === 'multisig.plugin.dao.eth';
+  const walletBased = pluginType === 'multisig.plugin.echo77.eth';
 
   const headerButtonHandler = () => {
     walletBased

@@ -865,6 +865,8 @@ export const translateToAppNetwork = (
       return 'zksyncSepolia';
     case SdkSupportedNetworks.ZKSYNC_MAINNET:
       return 'zksync';
+    case SdkSupportedNetworks.DARWINIA:
+      return 'darwinia';
     default:
       return 'unsupported';
   }
@@ -905,6 +907,8 @@ export function translateToNetworkishName(
       return SdkSupportedNetworks.ZKSYNC_SEPOLIA;
     case 'zksync':
       return SdkSupportedNetworks.ZKSYNC_MAINNET;
+    case 'darwinia':
+      return SdkSupportedNetworks.DARWINIA;
   }
 
   return 'unsupported';
@@ -913,12 +917,12 @@ export function translateToNetworkishName(
 /**
  * display ens names properly
  * @param ensName ens name
- * @returns ens name or empty string if ens name is null.dao.eth
+ * @returns ens name or empty string if ens name is null.echo77.eth
  */
 export function toDisplayEns(ensName?: string) {
-  if (!ensName || ensName === 'null.dao.eth') return '';
+  if (!ensName || ensName === 'null.echo77.eth') return '';
 
-  if (!ensName.includes('.dao.eth')) return `${ensName}.dao.eth`;
+  if (!ensName.includes('.echo77.eth')) return `${ensName}.echo77.eth`;
   return ensName;
 }
 
@@ -1319,7 +1323,7 @@ export function getPluginRepoAddress(
     Object.values(SdkSupportedNetworks).includes(translatedNetwork) &&
     Object.values(SupportedVersions).includes(version)
   ) {
-    return pluginType === 'multisig.plugin.dao.eth'
+    return pluginType === 'multisig.plugin.echo77.eth'
       ? getNetworkDeployments(translatedNetwork)[version]?.MultisigRepoProxy
           ?.address
       : getNetworkDeployments(translatedNetwork)[version]?.TokenVotingRepoProxy

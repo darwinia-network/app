@@ -115,7 +115,7 @@ const fetchCreatorProposals = async (
   };
 
   const executedQuery =
-    pluginType === 'multisig.plugin.dao.eth'
+    pluginType === 'multisig.plugin.echo77.eth'
       ? multisigProposalsQuery
       : tokenVotingProposalsQuery;
 
@@ -125,7 +125,7 @@ const fetchCreatorProposals = async (
   });
 
   const resultProposalsIds =
-    (pluginType === 'multisig.plugin.dao.eth'
+    (pluginType === 'multisig.plugin.echo77.eth'
       ? response.multisigProposals
       : response.tokenVotingProposals) || [];
 

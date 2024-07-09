@@ -360,7 +360,7 @@ const ProposalTransactionProvider: React.FC<Props> = ({children}) => {
   };
 
   if (
-    pluginType === 'multisig.plugin.dao.eth' ||
+    pluginType === 'multisig.plugin.echo77.eth' ||
     pluginType === GaslessPluginName
   ) {
     title = t('transactionModal.multisig.title.approveProposal');

@@ -348,7 +348,7 @@ export const EditMvSettings: React.FC<EditMvSettingsProps> = ({daoDetails}) => {
     // TODO: Alerts share will be added later
     setValue(
       'membership',
-      daoDetails?.plugins[0].id === 'token-voting.plugin.dao.eth' ||
+      daoDetails?.plugins[0].id === 'token-voting.plugin.echo77.eth' ||
         daoDetails?.plugins[0].id === GaslessPluginName
         ? 'token'
         : 'wallet'

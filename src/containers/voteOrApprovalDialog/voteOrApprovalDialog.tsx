@@ -74,7 +74,7 @@ export const VoteOrApprovalDialog: React.FC<
   const handleSuccessClick = () => onClose?.();
 
   const dialogType =
-    pluginType === 'multisig.plugin.dao.eth' ? 'approval' : 'vote';
+    pluginType === 'multisig.plugin.echo77.eth' ? 'approval' : 'vote';
 
   const dialogContext =
     dialogType === 'approval' && tryExecution ? 'execute' : undefined;

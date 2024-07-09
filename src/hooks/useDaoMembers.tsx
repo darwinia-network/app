@@ -130,7 +130,7 @@ export const useDaoMembers = (
   const {data: daoToken} = useDaoToken(pluginAddress);
 
   const isGaslessBased = pluginType === GaslessPluginName;
-  const isTokenBased = pluginType === 'token-voting.plugin.dao.eth';
+  const isTokenBased = pluginType === 'token-voting.plugin.echo77.eth';
 
   const opts = options ? options : {};
   let memberCount = 0;

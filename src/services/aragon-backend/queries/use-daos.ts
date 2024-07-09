@@ -13,10 +13,10 @@ const daosQueryDocument = gql`
   query Daos(
     $pluginNames: [String!]
     $orderBy: String
-    $skip: Float
+    $skip: Int
     $direction: OrderDirection
     $networks: [Network!]
-    $take: Float
+    $take: Int
     $memberAddress: String
   ) {
     daos(

@@ -10,17 +10,17 @@ import {VocdoniEnv} from './useVocdoniSdk';
 import {CENSUS3_URL} from './useCensus3';
 
 export const GaslessPluginName =
-  'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.dao.eth';
+  'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.echo77.eth';
 export type GaslessPluginType = typeof GaslessPluginName;
 
 export type PluginTypes =
-  | 'token-voting.plugin.dao.eth'
-  | 'multisig.plugin.dao.eth'
+  | 'token-voting.plugin.echo77.eth'
+  | 'multisig.plugin.echo77.eth'
   | GaslessPluginType;
 
-type PluginType<T> = T extends 'token-voting.plugin.dao.eth'
+type PluginType<T> = T extends 'token-voting.plugin.echo77.eth'
   ? TokenVotingClient
-  : T extends 'multisig.plugin.dao.eth'
+  : T extends 'multisig.plugin.echo77.eth'
   ? MultisigClient
   : T extends GaslessPluginType
   ? GaslessVotingClient
@@ -73,10 +73,10 @@ export const usePluginClient = <T extends PluginTypes = PluginTypes>(
       setPluginClient(undefined);
     } else {
       switch (pluginType as PluginTypes) {
-        case 'multisig.plugin.dao.eth':
+        case 'multisig.plugin.echo77.eth':
           setPluginClient(new MultisigClient(context));
           break;
-        case 'token-voting.plugin.dao.eth':
+        case 'token-voting.plugin.echo77.eth':
           setPluginClient(new TokenVotingClient(context));
           break;
         case GaslessPluginName:

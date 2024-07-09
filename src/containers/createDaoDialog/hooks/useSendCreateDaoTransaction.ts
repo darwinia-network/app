@@ -83,8 +83,8 @@ export const useSendCreateDaoTransaction = (
           {
             id:
               membership === 'token'
-                ? 'token-voting.plugin.dao.eth'
-                : 'multisig.plugin.dao.eth',
+                ? 'token-voting.plugin.echo77.eth'
+                : 'multisig.plugin.echo77.eth',
             data: plugins[0].data,
           },
         ],

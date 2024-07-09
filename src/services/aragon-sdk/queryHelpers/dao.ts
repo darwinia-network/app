@@ -37,7 +37,7 @@ export function toDaoDetails(
 ): DaoDetails {
   return {
     address: dao.id,
-    ensDomain: dao.subdomain + '.dao.eth',
+    ensDomain: dao.subdomain + '.echo77.eth',
     metadata: {
       name: metadata?.name,
       description: metadata?.description,
@@ -56,7 +56,7 @@ export function toDaoDetails(
       .map(
         (plugin: SubgraphPluginListItem): InstalledPluginListItem => ({
           // we checked with the filter above that these are not null
-          id: `${plugin.appliedPluginRepo!.subdomain}.plugin.dao.eth`,
+          id: `${plugin.appliedPluginRepo!.subdomain}.plugin.echo77.eth`,
           release: plugin.appliedVersion!.release.release,
           build: plugin.appliedVersion!.build,
           instanceAddress: plugin.appliedPreparation!.pluginAddress,

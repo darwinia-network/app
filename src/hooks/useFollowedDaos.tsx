@@ -76,11 +76,11 @@ export const useFollowedDaosInfiniteQuery = (
   const pluginIds = pluginNames?.map((pluginName: string) => {
     switch (pluginName) {
       case 'token-voting-repo':
-        return 'token-voting.plugin.dao.eth';
+        return 'token-voting.plugin.echo77.eth';
       case 'multisig-repo':
-        return 'multisig.plugin.dao.eth';
+        return 'multisig.plugin.echo77.eth';
       default:
-        return 'multisig.plugin.dao.eth';
+        return 'multisig.plugin.echo77.eth';
     }
   });
 

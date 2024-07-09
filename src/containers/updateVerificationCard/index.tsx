@@ -23,7 +23,7 @@ export const UpdateVerificationCard: React.FC<UpdateVerificationCardProps> = ({
   const {data: daoDetails} = useDaoDetailsQuery();
 
   const pluginType =
-    daoDetails?.plugins[0].id === 'token-voting.plugin.dao.eth'
+    daoDetails?.plugins[0].id === 'token-voting.plugin.echo77.eth'
       ? 'token voting'
       : 'multisig';
 

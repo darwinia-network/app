@@ -94,7 +94,7 @@ const WidgetFooter: React.FC<FooterProps> = ({
 
   switch (status) {
     case 'defeated': {
-      return pluginType === 'multisig.plugin.dao.eth' ? (
+      return pluginType === 'multisig.plugin.echo77.eth' ? (
         <AlertCard
           variant="info"
           message={t('governance.executionCard.statusMultisig.expiredTitle')}

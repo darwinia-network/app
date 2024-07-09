@@ -120,7 +120,7 @@ export const VotingTerminal: React.FC<VotingTerminalProps> = ({
   const fetchPastVotingPower = usePastVotingPowerAsync();
 
   const isMultisigProposal =
-    (pluginType === 'multisig.plugin.dao.eth' ||
+    (pluginType === 'multisig.plugin.echo77.eth' ||
       pluginType === GaslessPluginName) && // If is gasless and have approvals or min approvals act as multisig voting terminal
     !!approvals &&
     !!minApproval;

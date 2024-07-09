@@ -53,19 +53,7 @@ class AragonGateway {
       return null;
     }
 
-    const {gatewayNetwork} = CHAIN_METADATA[network];
-    const gatewayKey =
-      network === 'zksyncSepolia' || network === 'zksync'
-        ? import.meta.env.VITE_GATEWAY_RPC_API_KEY_ALCHEMY
-        : import.meta.env.VITE_GATEWAY_RPC_API_KEY;
-
-    const baseUrl =
-      network === 'zksyncSepolia' || network === 'zksync'
-        ? this.baseUrl.replace('app', 'alchemy')
-        : this.baseUrl;
-
-    const rpcUrl = `${baseUrl}/v${this.rpcVersion}/rpc/${gatewayNetwork}/${gatewayKey}`;
-    return rpcUrl;
+    return this.baseUrl;
   };
 
   buildIpfsUrl = (

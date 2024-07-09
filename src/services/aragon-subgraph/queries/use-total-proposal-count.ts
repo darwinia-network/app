@@ -95,9 +95,9 @@ const fetchTotalProposalCount = async (
   invariant(client != null, 'fetchTotalProposalCount: client is not defined');
 
   switch (params.pluginType) {
-    case 'multisig.plugin.dao.eth':
+    case 'multisig.plugin.echo77.eth':
       return await fetchMultisigProposalCount(params, client.graphql);
-    case 'token-voting.plugin.dao.eth':
+    case 'token-voting.plugin.echo77.eth':
       return await fetchTokenVotingProposalCount(params, client.graphql);
     case GaslessPluginName:
       return await fetchGaslessVotingProposalCount(params, client.graphql);

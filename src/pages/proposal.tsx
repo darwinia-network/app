@@ -111,8 +111,8 @@ export const Proposal: React.FC = () => {
   const {data: daoDetails, isLoading: detailsAreLoading} = useDaoDetailsQuery();
   const pluginAddress = daoDetails?.plugins?.[0]?.instanceAddress as string;
   const pluginType = daoDetails?.plugins?.[0]?.id as PluginTypes;
-  const isMultisigPlugin = pluginType === 'multisig.plugin.dao.eth';
-  const isTokenVotingPlugin = pluginType === 'token-voting.plugin.dao.eth';
+  const isMultisigPlugin = pluginType === 'multisig.plugin.echo77.eth';
+  const isTokenVotingPlugin = pluginType === 'token-voting.plugin.echo77.eth';
   const isGaslessVotingPlugin = pluginType === GaslessPluginName;
 
   const {data: daoToken} = useDaoToken(pluginAddress);

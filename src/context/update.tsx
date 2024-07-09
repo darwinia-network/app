@@ -281,7 +281,7 @@ const UpdateProvider: React.FC<{children: ReactElement}> = ({children}) => {
     dispatch({
       type: 'setDaoUpdateData',
       payload: {
-        daoAddressOrEns: daoDetails!.address, // my-dao.dao.eth
+        daoAddressOrEns: daoDetails!.address, // my-dao.echo77.eth
         pluginAddress: daoDetails?.plugins?.[0]!.instanceAddress as string,
         pluginRepo: pluginAvailableVersions?.address,
         newVersion: pluginSelectedVersion?.version as VersionTag,

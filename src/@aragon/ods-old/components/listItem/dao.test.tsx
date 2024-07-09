@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {ListItemDao} from './dao';
 
-const DefaultProps = {daoName: 'abc', daoAddress: 'abc.dao.eth'};
+const DefaultProps = {daoName: 'abc', daoAddress: 'abc.echo77.eth'};
 
 describe('ListItemDao', () => {
   // eslint-disable-next-line

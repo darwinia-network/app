@@ -31,7 +31,7 @@ export const DaoCard = (props: IDaoCardProps) => {
 
   // TODO: This should be changed for new plugin types
   const daoType =
-    pluginName === 'token-voting.plugin.dao.eth' ||
+    pluginName === 'token-voting.plugin.echo77.eth' ||
     pluginName === 'token-voting-repo'
       ? t('explore.explorer.tokenBased')
       : t('explore.explorer.walletBased');
