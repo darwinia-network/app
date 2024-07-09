@@ -15,6 +15,7 @@ class AragonGateway {
   private rpcVersion = '1.0';
   private ipfsVersion = '1.0';
   private baseUrl = import.meta.env.VITE_GATEWAY_URL as string;
+  private ipfsUrl = import.meta.env.VITE_IPFS_URL as string;
 
   getRpcProvider = (
     chainIdOrNetwork: number | SupportedNetworks
@@ -65,9 +66,7 @@ class AragonGateway {
       return null;
     }
 
-    const {isTestnet} = CHAIN_METADATA[network];
-    const ipfsEnv = isTestnet ? 'test' : 'prod';
-    const ipfsUrl = `${this.baseUrl}/v${this.ipfsVersion}/ipfs/${ipfsEnv}/api/v0`;
+    const ipfsUrl = `${this.ipfsUrl}/api/v0`;
 
     return ipfsUrl;
   };
