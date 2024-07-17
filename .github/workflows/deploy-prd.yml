@@ -1,9 +1,14 @@
 name: Deploy production
 
+# on:
+#   push:
+#     tags:
+#       - 'v*'
+
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - darwinia
 
 jobs:
   deploy:

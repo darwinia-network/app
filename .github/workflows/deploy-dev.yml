@@ -1,25 +1,25 @@
-name: Deploy develop
+# name: Deploy develop
 
-on:
-  pull_request:
+# on:
+#   pull_request:
 
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+# jobs:
+#   deploy:
+#     name: Deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - uses: darwinia-network/devops/actions/smart-vercel@main
-        name: Deploy to Vercel
-        with:
-          node_version: 20
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          vercel_group: itering
-          preview_output: true
-          dist_path: dist
-          project_name: aragon-app
-          enable_cache: true
-          enable_notify_comment: true
+#       - uses: darwinia-network/devops/actions/smart-vercel@main
+#         name: Deploy to Vercel
+#         with:
+#           node_version: 20
+#           vercel_token: ${{ secrets.VERCEL_TOKEN }}
+#           vercel_group: itering
+#           preview_output: true
+#           dist_path: dist
+#           project_name: aragon-app
+#           enable_cache: true
+#           enable_notify_comment: true
 
 
