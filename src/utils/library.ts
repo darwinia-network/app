@@ -917,12 +917,12 @@ export function translateToNetworkishName(
 /**
  * display ens names properly
  * @param ensName ens name
- * @returns ens name or empty string if ens name is null.echo77.eth
+ * @returns ens name or empty string if ens name is null.ring-dao.eth
  */
 export function toDisplayEns(ensName?: string) {
-  if (!ensName || ensName === 'null.echo77.eth') return '';
+  if (!ensName || ensName === 'null.ring-dao.eth') return '';
 
-  if (!ensName.includes('.echo77.eth')) return `${ensName}.echo77.eth`;
+  if (!ensName.includes('.ring-dao.eth')) return `${ensName}.ring-dao.eth`;
   return ensName;
 }
 
@@ -1323,7 +1323,7 @@ export function getPluginRepoAddress(
     Object.values(SdkSupportedNetworks).includes(translatedNetwork) &&
     Object.values(SupportedVersions).includes(version)
   ) {
-    return pluginType === 'multisig.plugin.echo77.eth'
+    return pluginType === 'multisig.plugin.ring-dao.eth'
       ? getNetworkDeployments(translatedNetwork)[version]?.MultisigRepoProxy
           ?.address
       : getNetworkDeployments(translatedNetwork)[version]?.TokenVotingRepoProxy

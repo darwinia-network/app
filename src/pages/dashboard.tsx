@@ -303,7 +303,7 @@ export const Dashboard: React.FC = () => {
 
   if (liveDao && liveAddressOrEns) {
     const daoType =
-      (liveDao?.plugins[0]?.id as PluginTypes) === 'multisig.plugin.echo77.eth'
+      (liveDao?.plugins[0]?.id as PluginTypes) === 'multisig.plugin.ring-dao.eth'
         ? t('explore.explorer.walletBased')
         : t('explore.explorer.tokenBased');
 

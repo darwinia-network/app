@@ -42,7 +42,7 @@ export const DaoMember: React.FC = () => {
 
   const {data: daoToken} = useDaoToken(pluginAddress ?? '');
 
-  const isTokenBasedDao = pluginType === 'token-voting.plugin.echo77.eth';
+  const isTokenBasedDao = pluginType === 'token-voting.plugin.ring-dao.eth';
 
   const {data: fetchedMemberEnsName} = useEnsName({
     address: user as Address,

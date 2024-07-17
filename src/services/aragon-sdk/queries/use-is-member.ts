@@ -40,7 +40,7 @@ export const useIsMember = (
   const {api: provider} = useProviders();
   const fetchVotingPower = useVotingPowerAsync();
 
-  const isTokenVoting = params.pluginType === 'token-voting.plugin.echo77.eth';
+  const isTokenVoting = params.pluginType === 'token-voting.plugin.ring-dao.eth';
   const isGaslessVoting = params.pluginType === GaslessPluginName;
 
   // fetch voting settings

@@ -27,8 +27,8 @@ export const useCreateProposalTransaction = (
 
   const {client} = useClient();
 
-  const isMultisig = pluginType === 'multisig.plugin.echo77.eth';
-  const isTokenVoting = pluginType === 'token-voting.plugin.echo77.eth';
+  const isMultisig = pluginType === 'multisig.plugin.ring-dao.eth';
+  const isTokenVoting = pluginType === 'token-voting.plugin.ring-dao.eth';
 
   const {
     data: multisigTransaction,

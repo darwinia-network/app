@@ -49,10 +49,10 @@ export const VersionInfoCard: React.FC<{
   let pluginName = '';
 
   switch (pluginType) {
-    case 'multisig.plugin.echo77.eth':
+    case 'multisig.plugin.ring-dao.eth':
       pluginName = 'Multisig';
       break;
-    case 'token-voting.plugin.echo77.eth':
+    case 'token-voting.plugin.ring-dao.eth':
       pluginName = 'Token Voting';
       break;
     case GaslessPluginName:

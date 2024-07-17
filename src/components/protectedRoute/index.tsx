@@ -206,7 +206,7 @@ const ProtectedRoute: React.FC = () => {
   useEffect(() => {
     if (status === 'connected' && !isOnWrongNetwork && pluginType) {
       if (
-        pluginType === 'token-voting.plugin.echo77.eth' ||
+        pluginType === 'token-voting.plugin.ring-dao.eth' ||
         pluginType === GaslessPluginName
       ) {
         gateTokenBasedProposal();

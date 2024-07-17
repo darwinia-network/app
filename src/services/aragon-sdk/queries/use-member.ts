@@ -198,7 +198,7 @@ export const useMember = (
   params: IFetchMemberParams,
   options: Omit<UseQueryOptions<TokenVotingMember | null>, 'queryKey'> = {}
 ) => {
-  const client = usePluginClient('token-voting.plugin.echo77.eth');
+  const client = usePluginClient('token-voting.plugin.ring-dao.eth');
   const {network} = useNetwork();
 
   const baseParams = {
@@ -220,7 +220,7 @@ export const useMemberDAOs = (
   params: IFetchMemberParams,
   options: Omit<UseQueryOptions<MemberDAOsType>, 'queryKey' | 'queryFn'> = {}
 ) => {
-  const client = usePluginClient('token-voting.plugin.echo77.eth');
+  const client = usePluginClient('token-voting.plugin.ring-dao.eth');
   const {network} = useWallet();
   const baseParams = {
     address: params.address as string,

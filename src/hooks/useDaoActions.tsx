@@ -21,7 +21,7 @@ export function useDaoActions(dao: string): HookData<ActionParameter[]> {
     isLoading: daoDetailsLoading,
   } = useDaoQuery(dao);
   const {id: pluginType} = daoDetails?.plugins[0] || {};
-  const multisig = pluginType === 'multisig.plugin.echo77.eth';
+  const multisig = pluginType === 'multisig.plugin.ring-dao.eth';
 
   const {data: votingSettings, isLoading: settingsLoading} = useVotingSettings({
     pluginAddress: daoDetails?.plugins[0].instanceAddress as string,

@@ -94,7 +94,7 @@ export const useSendVoteOrApprovalTransaction = (
     setVoteOrApprovalSubmitted(true);
 
     switch (pluginType) {
-      case 'token-voting.plugin.echo77.eth': {
+      case 'token-voting.plugin.ring-dao.eth': {
         // cache token-voting vote
         if (address != null && votingPower && vote) {
           // fetch token user balance, ie vote weight
@@ -118,7 +118,7 @@ export const useSendVoteOrApprovalTransaction = (
         }
         break;
       }
-      case 'multisig.plugin.echo77.eth': {
+      case 'multisig.plugin.ring-dao.eth': {
         if (address) {
           voteStorage.addVote(
             CHAIN_METADATA[network].id,
@@ -128,7 +128,7 @@ export const useSendVoteOrApprovalTransaction = (
         }
         break;
       }
-      case 'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.echo77.eth': {
+      case 'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.ring-dao.eth': {
         break;
       }
       default: {

@@ -83,8 +83,8 @@ export const useSendCreateDaoTransaction = (
           {
             id:
               membership === 'token'
-                ? 'token-voting.plugin.echo77.eth'
-                : 'multisig.plugin.echo77.eth',
+                ? 'token-voting.plugin.ring-dao.eth'
+                : 'multisig.plugin.ring-dao.eth',
             data: plugins[0].data,
           },
         ],

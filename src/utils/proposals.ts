@@ -332,7 +332,7 @@ export function getProposalStatusSteps(
         {...getActiveProposalStep(t, startDate, 'done')},
         {
           label:
-            pluginType === 'token-voting.plugin.echo77.eth'
+            pluginType === 'token-voting.plugin.ring-dao.eth'
               ? t('governance.statusWidget.defeated')
               : t('governance.statusWidget.expired'),
           mode: 'failed',

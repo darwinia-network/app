@@ -62,7 +62,7 @@ class CreateProposalUtils {
     const vocdoniContractInterface = VocdoniVoting__factory.createInterface();
 
     const contractInterface =
-      pluginType === 'multisig.plugin.echo77.eth'
+      pluginType === 'multisig.plugin.ring-dao.eth'
         ? multisigContractInterface
         : pluginType === GaslessPluginName
         ? vocdoniContractInterface

@@ -44,11 +44,11 @@ const SetupMultisigVotingForm: React.FC = () => {
 
   const {
     data: {members},
-  } = useDaoMembers(pluginAddress, 'multisig.plugin.echo77.eth');
+  } = useDaoMembers(pluginAddress, 'multisig.plugin.ring-dao.eth');
 
   const {data: votingSettings} = useVotingSettings({
     pluginAddress,
-    pluginType: 'multisig.plugin.echo77.eth',
+    pluginType: 'multisig.plugin.ring-dao.eth',
   });
 
   const [utcInstance, setUtcInstance] = useState<UtcInstance>('first');

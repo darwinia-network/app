@@ -49,7 +49,7 @@ export const DefineUpdateProposal: React.FC = () => {
   const {data: dao, isLoading: detailsLoading} = useDaoDetailsQuery();
   const daoAddress = dao?.address as string;
   const pluginUpdateTypeLabel =
-    dao?.plugins[0].id === 'token-voting.plugin.echo77.eth'
+    dao?.plugins[0].id === 'token-voting.plugin.ring-dao.eth'
       ? 'Token voting'
       : 'Multisig';
 

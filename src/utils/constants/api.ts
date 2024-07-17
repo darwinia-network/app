@@ -39,7 +39,7 @@ export const SUBGRAPH_API_URL: SubgraphNetworkUrl = {
     'https://subgraph.satsuma-prod.com/qHR2wGfc5RLi6/aragon/osx-zksync-era-sepolia/version/1.4.2/api',
 
   darwinia:
-    'https://thegraph-g2.darwinia.network/training/subgraphs/name/osx-darwinia',
+    'https://thegraph-g2.darwinia.network/training/subgraphs/name/osx-darwinia-dev',
 
   unsupported: undefined,
 };

@@ -19,15 +19,15 @@ class VoteOrApprovalUtils {
     const proposalId = new ProposalId(urlId!).export();
 
     switch (PluginType) {
-      case 'token-voting.plugin.echo77.eth':
-      case 'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.echo77.eth': {
+      case 'token-voting.plugin.ring-dao.eth':
+      case 'vocdoni-gasless-voting-poc-vanilla-erc20.plugin.ring-dao.eth': {
         param = {
           proposalId,
           vote: vote as VoteValues,
         };
         break;
       }
-      case 'multisig.plugin.echo77.eth': {
+      case 'multisig.plugin.ring-dao.eth': {
         param = {
           proposalId,
           tryExecution,

@@ -33,7 +33,7 @@ export const useDelegatee = (
   const client = usePluginClient(
     pluginType === GaslessPluginName
       ? GaslessPluginName
-      : 'token-voting.plugin.echo77.eth'
+      : 'token-voting.plugin.ring-dao.eth'
   );
   const {address, network} = useWallet();
 

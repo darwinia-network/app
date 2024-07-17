@@ -300,10 +300,10 @@ const PluginSettingsWrapper: React.FC<IPluginSettings> = ({daoDetails}) => {
   const pluginType = daoDetails?.plugins?.[0]?.id as PluginTypes;
 
   switch (pluginType) {
-    case 'token-voting.plugin.echo77.eth':
+    case 'token-voting.plugin.ring-dao.eth':
       return <MajorityVotingSettings daoDetails={daoDetails} />;
 
-    case 'multisig.plugin.echo77.eth':
+    case 'multisig.plugin.ring-dao.eth':
       return <MultisigSettings daoDetails={daoDetails} />;
 
     case GaslessPluginName:

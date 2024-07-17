@@ -14,10 +14,10 @@ export const EditSettings: React.FC = () => {
     return <Loading />;
   } else if (!daoDetails) {
     return null;
-  } else if (pluginType === 'multisig.plugin.echo77.eth') {
+  } else if (pluginType === 'multisig.plugin.ring-dao.eth') {
     return <EditMsSettings daoDetails={daoDetails} />;
   } else if (
-    pluginType === 'token-voting.plugin.echo77.eth' ||
+    pluginType === 'token-voting.plugin.ring-dao.eth' ||
     pluginType === GaslessPluginName
   ) {
     return <EditMvSettings daoDetails={daoDetails} />;

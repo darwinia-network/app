@@ -37,8 +37,8 @@ export const useWalletCanVote = (
   const [error, setError] = useState<Error>();
   const [isLoading, setIsLoading] = useState(false);
 
-  const isMultisigClient = pluginType === 'multisig.plugin.echo77.eth';
-  const isTokenVotingClient = pluginType === 'token-voting.plugin.echo77.eth';
+  const isMultisigClient = pluginType === 'multisig.plugin.ring-dao.eth';
+  const isTokenVotingClient = pluginType === 'token-voting.plugin.ring-dao.eth';
   const isGaslessVoting = pluginType === GaslessPluginName;
 
   const client = usePluginClient(pluginType);
