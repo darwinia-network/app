@@ -53,7 +53,7 @@ export enum SendTransactionStep {
   WAIT_CONFIRMATIONS = 'WAIT_CONFIRMATIONS',
 }
 
-const LONG_WAIT_TIMEOUT = 20_000;
+const LONG_WAIT_TIMEOUT = 30_000;
 
 export const useSendTransaction = (
   params: IUseSendTransactionParams

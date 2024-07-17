@@ -42,6 +42,8 @@ export const CreateDaoDialog: React.FC<ICreateDaoDialogProps> = props => {
       {enabled: createDaoParams != null && client != null}
     );
 
+  console.log(createDaoParams);
+
   const sendTransactionResults = useSendCreateDaoTransaction({
     process: createDaoProcess,
     transaction,
