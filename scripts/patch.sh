@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 
+set -ex
 
 BIN_PATH=$(cd "$(dirname "$0")"; pwd -P)
 WORK_PATH=${BIN_PATH}/../
@@ -22,4 +23,5 @@ cd ../../
 rm -rf osx-commons
 
 
+ls -la ${WORK_PATH}/node_modules/@aragon/osx-commons-configs/dist/deployments/json
 
