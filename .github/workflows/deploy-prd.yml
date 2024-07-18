@@ -29,7 +29,7 @@ jobs:
         env:
           VITE_GATEWAY_IPFS_API_KEY: ${{ secrets.GATEWAY_IPFS_API_KEY }}
           VITE_PINATA_JWT_API_KEY: ${{ secrets.PINATA_JWT_API_KEY }}
-          VITE_WALLET_CONNECT_PROJECT_ID: ${{ secrtes.VITE_WALLET_CONNECT_PROJECT_ID }}
+          VITE_WALLET_CONNECT_PROJECT_ID: ${{ secrtes.WALLET_CONNECT_PROJECT_ID }}
 
       - uses: darwinia-network/devops/actions/smart-vercel@main
         name: Deploy to Vercel
