@@ -22,7 +22,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@aragon/ods": "^1.0.20",
-    "@aragon/osx-commons-configs": "^0.6.0",
+    "@aragon/osx-commons-configs": "https://gitpkg.vercel.app/darwinia-network/osx-commons/configs?darwinia",
     "@aragon/sdk-client": "^1.25.0",
     "@aragon/sdk-client-common": "^1.17.0",
     "@playwright/test": "^1.42.1",
