@@ -25,7 +25,9 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: |
+          yarn build
+          ./scripts/patch.sh
         env:
           VITE_GATEWAY_IPFS_API_KEY: ${{ secrets.GATEWAY_IPFS_API_KEY }}
           VITE_PINATA_JWT_API_KEY: ${{ secrets.PINATA_JWT_API_KEY }}
