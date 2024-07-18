@@ -22,7 +22,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@aragon/ods": "^1.0.20",
-    "@aragon/osx-commons-configs": "https://gitpkg.vercel.app/darwinia-network/osx-commons/configs?darwinia",
+    "@aragon/osx-commons-configs": "0.6.0",
     "@aragon/sdk-client": "^1.25.0",
     "@aragon/sdk-client-common": "^1.17.0",
     "@playwright/test": "^1.42.1",
@@ -116,6 +116,9 @@
     "typescript": "^5.1.3",
     "vite": "^4.5.3",
     "vite-tsconfig-paths": "^4.2.0"
+  },
+  "resolutions": {
+    "@aragon/osx-commons-configs@0.6.0": "http://github.com/darwinia-network/osx-commons.git#darwinia"
   },
   "engines": {
     "node": ">=18.0.0"
