@@ -3,7 +3,7 @@
   "description": "Web application to interact with Aragon OSx",
   "version": "0.1.0",
   "private": true,
-  "author": "Aragon Association",
+  "author": "Aragon X",
   "homepage": ".",
   "license": "GPL-3.0",
   "type": "module",
