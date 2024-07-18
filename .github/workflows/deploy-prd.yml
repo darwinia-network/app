@@ -17,6 +17,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+        env:
+          VITE_GATEWAY_IPFS_API_KEY: ${{ secrets.GATEWAY_IPFS_API_KEY }}
+          VITE_PINATA_JWT_API_KEY: ${{ secrets.PINATA_JWT_API_KEY }}
+
       - uses: darwinia-network/devops/actions/smart-vercel@main
         name: Deploy to Vercel
         with:
@@ -26,6 +39,7 @@ jobs:
           preview_output: true
           dist_path: dist
           project_name: aragon-app
+          script_run: false
           enable_cache: true
           prod_mode: true
 
