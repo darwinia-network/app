@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
@@ -36,7 +36,6 @@ jobs:
       - uses: darwinia-network/devops/actions/smart-vercel@main
         name: Deploy to Vercel
         with:
-          node_version: 18
           vercel_token: ${{ secrets.VERCEL_TOKEN }}
           vercel_group: itering
           preview_output: true
