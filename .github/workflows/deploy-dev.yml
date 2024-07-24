@@ -1,25 +1,41 @@
-# name: Deploy develop
+name: Deploy develop
 
-# on:
-#   pull_request:
+on:
+  pull_request:
 
-# jobs:
-#   deploy:
-#     name: Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-#       - uses: darwinia-network/devops/actions/smart-vercel@main
-#         name: Deploy to Vercel
-#         with:
-#           node_version: 20
-#           vercel_token: ${{ secrets.VERCEL_TOKEN }}
-#           vercel_group: itering
-#           preview_output: true
-#           dist_path: dist
-#           project_name: aragon-app
-#           enable_cache: true
-#           enable_notify_comment: true
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Build
+        run: |
+          ./scripts/patch.sh
+          yarn build
+        env:
+          VITE_GATEWAY_IPFS_API_KEY: ${{ secrets.GATEWAY_IPFS_API_KEY }}
+          VITE_PINATA_JWT_API_KEY: ${{ secrets.PINATA_JWT_API_KEY }}
+          VITE_WALLET_CONNECT_PROJECT_ID: ${{ secrets.WALLET_CONNECT_PROJECT_ID }}
+
+      - uses: darwinia-network/devops/actions/smart-vercel@main
+        name: Deploy to Vercel
+        with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          vercel_group: itering
+          preview_output: true
+          dist_path: dist
+          project_name: aragon-app
+          script_run: false
+          enable_cache: true
+          enable_notify_comment: true
 
 
