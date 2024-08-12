@@ -867,6 +867,10 @@ export const translateToAppNetwork = (
       return 'zksync';
     case SdkSupportedNetworks.DARWINIA:
       return 'darwinia';
+    case SdkSupportedNetworks.CRAB:
+      return 'crab';
+    case SdkSupportedNetworks.KOI:
+      return 'koi';
     default:
       return 'unsupported';
   }
@@ -909,6 +913,10 @@ export function translateToNetworkishName(
       return SdkSupportedNetworks.ZKSYNC_MAINNET;
     case 'darwinia':
       return SdkSupportedNetworks.DARWINIA;
+    case 'crab':
+      return SdkSupportedNetworks.CRAB;
+    case 'koi':
+      return SdkSupportedNetworks.KOI;
   }
 
   return 'unsupported';

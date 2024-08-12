@@ -1070,7 +1070,9 @@
           "ethereumSepolia": "Ethereum Sepolia",
           "zksync": "zkSync Era",
           "zksyncSepolia": "zkSync Sepolia",
-          "darwinia": "Darwinia"
+          "darwinia": "Darwinia",
+          "crab": "Crab",
+          "koi": "Koi"
         },
         "ctaLabel": {
           "see0": "See 0 DAOs",

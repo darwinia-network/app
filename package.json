@@ -69,8 +69,8 @@
     "styled-components": "^6.0.8",
     "tiptap-markdown": "^0.8.4",
     "use-react-router-breadcrumbs": "^3.0.1",
-    "viem": "^2.9.18",
-    "wagmi": "^2.5.18"
+    "viem": "2.18.7",
+    "wagmi": "2.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

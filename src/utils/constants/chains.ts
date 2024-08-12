@@ -3,7 +3,7 @@
 import {i18n} from '../../../i18n.config';
 
 export const SUPPORTED_CHAIN_ID = [
-  1, 5, 46, 137, 300, 324, 8453, 80001, 84531, 42161, 421613, 11155111,
+  1, 5, 44, , 46, 137, 300, 324, 701, 8453, 80001, 84531, 42161, 421613, 11155111,
 ] as const;
 
 export type SupportedChainID = (typeof SUPPORTED_CHAIN_ID)[number];
@@ -26,6 +26,8 @@ export const NETWORKS_WITH_CUSTOM_REGISTRY: SupportedNetworks[] = [
   'zksync',
   'zksyncSepolia',
   'darwinia',
+  'crab',
+  'koi',
 ];
 
 export const L2_NETWORKS = NETWORKS_WITH_CUSTOM_REGISTRY;
@@ -38,7 +40,9 @@ const SUPPORTED_NETWORKS = [
   'sepolia',
   'zksync',
   'zksyncSepolia',
-  'darwinia'
+  'darwinia',
+  'crab',
+  'koi',
 ] as const;
 
 export type SupportedNetworks =
@@ -283,16 +287,15 @@ export const CHAIN_METADATA: Record<SupportedNetworks, ChainData> = {
     },
     supportsEns: false,
   },
-
   darwinia: {
     id: 46,
     name: i18n.t('explore.modal.filterDAOs.label.darwinia'),
     domain: 'L2 Blockchain',
-    logo: 'https://assets.coingecko.com/coins/images/9443/standard/RING.png?1696509535',
+    logo: 'https://rose-faithful-duck-413.mypinata.cloud/ipfs/QmXWGaeGUBhnuBUPNz3o7K5tXQcpUsDXQxtyrmYjoBbxjv',
     explorer: 'https://explorer.darwinia.network/',
     isTestnet: false,
     mainnet: 'darwinia',
-    explorerName: 'Darwinia Subscan',
+    explorerName: 'Darwinia Explorer',
     publicRpc: 'https://rpc.darwinia.network',
     gatewayNetwork: 'darwinia/mainnet',
     nativeCurrency: {
@@ -304,6 +307,54 @@ export const CHAIN_METADATA: Record<SupportedNetworks, ChainData> = {
     etherscanApiKey: '',
     covalent: {
       networkId: 'darwinia-mainnet',
+      nativeTokenId: '0x0000000000000000000000000000000000000000',
+    },
+    supportsEns: false,
+  },
+  crab: {
+    id: 44,
+    name: i18n.t('explore.modal.filterDAOs.label.crab'),
+    domain: 'L2 Blockchain',
+    logo: 'https://rose-faithful-duck-413.mypinata.cloud/ipfs/Qmcd4z8rM6thKX9FLHr7VFgutVYfNkPYmoXMgaFcCENA9u',
+    explorer: 'https://crab-scan.darwinia.network/',
+    isTestnet: false,
+    mainnet: 'crab',
+    explorerName: 'Crab Explorer',
+    publicRpc: 'https://crab-rpc.darwinia.network',
+    gatewayNetwork: 'crab/mainnet',
+    nativeCurrency: {
+      name: 'Crab Network Native Token',
+      symbol: 'Crab',
+      decimals: 18,
+    },
+    etherscanApi: 'https://crab-scan.darwinia.network/api',
+    etherscanApiKey: '',
+    covalent: {
+      networkId: 'crab-mainnet',
+      nativeTokenId: '0x0000000000000000000000000000000000000000',
+    },
+    supportsEns: false,
+  },
+  koi: {
+    id: 701,
+    name: i18n.t('explore.modal.filterDAOs.label.koi'),
+    domain: 'L2 Blockchain',
+    logo: 'https://rose-faithful-duck-413.mypinata.cloud/ipfs/QmbKECsGzfaMvMakxaDbnSpiGoAQQTvmYDxgifsRntbfKo',
+    explorer: 'https://koi-scan.darwinia.network/',
+    isTestnet: false,
+    mainnet: 'darwinia',
+    explorerName: 'Koi Explorer',
+    publicRpc: 'https://koi-rpc.darwinia.network',
+    gatewayNetwork: 'koi/testnet',
+    nativeCurrency: {
+      name: 'Koi Network Native Token',
+      symbol: 'KRING',
+      decimals: 18,
+    },
+    etherscanApi: 'https://koi-scan.darwinia.network/api',
+    etherscanApiKey: '',
+    covalent: {
+      networkId: 'koi-testnet',
       nativeTokenId: '0x0000000000000000000000000000000000000000',
     },
     supportsEns: false,
