@@ -14,7 +14,11 @@ import {
 class AragonGateway {
   private rpcVersion = '1.0';
   private ipfsVersion = '1.0';
-  private baseUrl = import.meta.env.VITE_GATEWAY_URL as string;
+  private baseUrl = {
+    darwinia: 'https://rpc.darwinia.network',
+    crab: 'https://crab-rpc.darwinia.network',
+    koi: 'https://koi-rpc.darwinia.network',
+  }
   private ipfsUrl = import.meta.env.VITE_IPFS_URL as string;
 
   getRpcProvider = (
@@ -54,7 +58,7 @@ class AragonGateway {
       return null;
     }
 
-    return this.baseUrl;
+    return this.baseUrl[network];
   };
 
   buildIpfsUrl = (

@@ -21,6 +21,8 @@ import {
   zkSyncSepoliaTestnet,
   zkSync,
   darwinia,
+  crab,
+  koi,
 } from 'wagmi/chains';
 import {AlertProvider} from 'context/alert';
 import {GlobalModalsProvider} from 'context/globalModals';
@@ -51,6 +53,8 @@ const chains = [
   zkSyncSepoliaTestnet,
   zkSync,
   darwinia,
+  crab,
+  koi,
 ] as [Chain, ...Chain[]];
 
 const transports = chains.reduce(
